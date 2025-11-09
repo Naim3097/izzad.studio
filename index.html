@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Izzad.Studio – Digital Studio by Axtra</title>
+    <meta name="description" content="Minimalist digital studio showcasing client transformations in color. Design, branding, portfolio.">
+    <meta name="keywords" content="digital studio, branding, design, portfolio, minimal, axtra">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Izzad.Studio – Digital Studio by Axtra">
+    <meta property="og:description" content="Step into black & white, leave in full color.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://izzad.studio">
+    <meta property="og:image" content="/assets/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Izzad.Studio – Digital Studio by Axtra">
+    <meta name="twitter:description" content="Step into black & white, leave in full color.">
+    <meta name="twitter:image" content="/assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+    
+    <!-- Navigation - Sticky Header -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <!-- Logo (Left Side) -->
+            <div class="nav-logo">
+                <a href="#hero" aria-label="Izzad Studio Home">
+                    <img src="/assets/logo/LOGO WHITE.png" alt="Izzad Studio">
+                </a>
+            </div>
+            
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Links (Right Side) -->
+            <ul class="nav-links">
+                <li><a href="#gallery" class="active">exhibitions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" role="banner">
+        <div class="hero__container">
+            <h1 class="hero__title fade-in">
+                Every brand has a story<br>
+                <span class="hero__title-accent">we just help it find color</span>
+            </h1>
+            <p class="hero__subtitle fade-in-delay">
+                Izzad
+            </p>
+        </div>
+        <div class="hero__scroll-indicator" aria-hidden="true">
+            <span class="hero__scroll-line"></span>
+        </div>
+    </section>
+
+    <!-- Interlude Section - Optional: Brief philosophy statement -->
+    <section id="interlude" class="interlude" role="region">
+        <div class="interlude__container">
+            <p class="interlude__text fade-in-scroll">
+                some brands whisper. some shout.<br>
+                we just listen, then paint.
+            </p>
+        </div>
+    </section>
+
+    <!-- Philosophy Gallery - Text-Driven Navigation -->
+    <section id="gallery" class="philosophy-gallery" role="region" aria-labelledby="gallery-heading">
+        <div class="philosophy-gallery__container">
+            <header class="philosophy-gallery__intro">
+                <h2 id="gallery-heading" class="philosophy-gallery__title">what we believe</h2>
+                <p class="philosophy-gallery__subtitle">hover to see the work</p>
+            </header>
+            
+            <!-- Philosophy Statements - Hover reveals work -->
+            <div class="philosophy-list" id="philosophyList">
+                <!-- Will be populated by JS:
+                     Each statement is large type
+                     Hover reveals client work images below
+                     No cards, just text and images materializing -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Section - Book Fold Experience -->
+    <section id="photography" class="photography" role="region" aria-labelledby="photography-heading">
+        <div class="photography__container">
+            <!-- Intro Text -->
+            <div class="photography__intro">
+                <h2 id="photography-heading" class="photography__title">
+                    love? it can end.
+                </h2>
+                <p class="photography__subtitle">
+                    so what's there to make it feel everlasting
+                </p>
+            </div>
+
+            <!-- Book/Album Interface -->
+            <div class="photo-book" id="photoBook">
+                <div class="photo-book__wrapper">
+                    <!-- Left Page -->
+                    <div class="photo-book__page photo-book__page--left" id="pageLeft">
+                        <div class="photo-book__content">
+                            <img src="" alt="Wedding photography moment" class="photo-book__image" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Right Page -->
+                    <div class="photo-book__page photo-book__page--right" id="pageRight">
+                        <div class="photo-book__content">
+                            <img src="" alt="Wedding photography moment" class="photo-book__image" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Flipping Page -->
+                    <div class="photo-book__page photo-book__page--flipping" id="pageFlipping">
+                        <div class="photo-book__content photo-book__content--front">
+                            <img src="" alt="Wedding photography moment" class="photo-book__image" loading="lazy">
+                        </div>
+                        <div class="photo-book__content photo-book__content--back">
+                            <img src="" alt="Wedding photography moment" class="photo-book__image" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <button class="photo-book__nav photo-book__nav--prev" id="prevPage" aria-label="Previous photo">
+                    <span class="photo-book__arrow">‹</span>
+                </button>
+                <button class="photo-book__nav photo-book__nav--next" id="nextPage" aria-label="Next photo">
+                    <span class="photo-book__arrow">›</span>
+                </button>
+
+                <!-- Page Counter -->
+                <div class="photo-book__counter">
+                    <span id="currentPage">1</span> / <span id="totalPages">8</span>
+                </div>
+            </div>
+
+            <!-- Caption -->
+            <div class="photography__caption" id="photoCaption">
+                <p class="photography__caption-text">we freeze moments. you keep them forever.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__logo">
+                <img src="/assets/logo/LOGO BLACK.png" alt="Izzad Studio" class="footer__logo-image">
+            </div>
+            <p class="footer__text">
+                part of axtra
+            </p>
+            <p class="footer__year">
+                mmxxv
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/portfolio.js"></script>
+    <script src="/js/photography.js"></script>
+    <script src="/js/animations.js"></script>
+</body>
+</html>

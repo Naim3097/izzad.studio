@@ -1,0 +1,534 @@
+/* ==========================================
+   IZZAD.STUDIO - ANIMATIONS STYLESHEET
+   Scroll-triggered & Microinteractions
+   ========================================== */
+
+/* ==========================================
+   KEYFRAME ANIMATIONS
+   ========================================== */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In from Left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade In from Right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scroll Pulse (for hero indicator) */
+@keyframes scrollPulse {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Color Reveal Animation (Gradient Sweep) */
+@keyframes colorReveal {
+    from {
+        clip-path: circle(0% at 50% 50%);
+    }
+    to {
+        clip-path: circle(150% at 50% 50%);
+    }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   HERO SECTION ANIMATIONS
+   ========================================== */
+
+/* Hero Title Fade In */
+.hero__title {
+    opacity: 0;
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+}
+
+/* Hero Subtitle with Delay */
+.hero__subtitle {
+    opacity: 0;
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+}
+
+/* Hero CTA with Longer Delay */
+.hero__cta {
+    opacity: 0;
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.9s forwards;
+}
+
+/* ==========================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ========================================== */
+
+/* Base state for elements that will animate on scroll */
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide from left on scroll */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide from right on scroll */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale up on scroll */
+.scale-in-scroll {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scale-in-scroll.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered animation for grid items */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay variations for staggered items */
+.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.stagger-item:nth-child(4) { transition-delay: 0.4s; }
+.stagger-item:nth-child(5) { transition-delay: 0.5s; }
+.stagger-item:nth-child(6) { transition-delay: 0.6s; }
+.stagger-item:nth-child(7) { transition-delay: 0.7s; }
+.stagger-item:nth-child(8) { transition-delay: 0.8s; }
+
+/* ==========================================
+   GALLERY ANIMATIONS
+   ========================================== */
+
+/* Gallery Item Hover - Enhanced with subtle float */
+.gallery-item {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+/* Color Reveal Effect - Smooth gradient reveal */
+.gallery-item__image-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover .gallery-item__image-color {
+    opacity: 1;
+}
+
+/* Interlude section fade in */
+.interlude__text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interlude__text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   MODAL ANIMATIONS
+   ========================================== */
+
+/* Modal Enter Animation */
+.modal[aria-hidden="false"] {
+    animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__content {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modal Body Content Fade In */
+.modal__body > * {
+    opacity: 0;
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
+
+/* ==========================================
+   CAROUSEL ANIMATIONS
+   ========================================== */
+
+/* Smooth slide transition */
+.carousel__track {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Carousel image fade in when loaded */
+.carousel__image {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel__image.loaded {
+    opacity: 1;
+}
+
+/* Carousel button hover effect */
+.carousel__button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel__button:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel__button:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* ==========================================
+   FORM ANIMATIONS
+   ========================================== */
+
+/* Input Focus Animation */
+.form-input {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+    transform: scale(1.01);
+}
+
+/* Label Float Animation (if implementing floating labels) */
+.form-group {
+    position: relative;
+}
+
+.form-label-float {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .form-label-float,
+.form-input:not(:placeholder-shown) + .form-label-float {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.75rem;
+    background-color: white;
+    padding: 0 0.25rem;
+}
+
+/* Submit Button Ripple Effect */
+.form-submit {
+    position: relative;
+    overflow: hidden;
+}
+
+.form-submit::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.form-submit:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Success Message Animation */
+.form-success {
+    animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   NAVIGATION ANIMATIONS
+   ========================================== */
+
+/* Nav hide on scroll down, show on scroll up */
+.nav.nav--hidden {
+    transform: translateY(-100%);
+}
+
+.nav.nav--visible {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   ABOUT SECTION ANIMATIONS
+   ========================================== */
+
+/* Team member image hover effect */
+.team-member__image-wrapper {
+    transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member:hover .team-member__image-wrapper {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   PROCESS SECTION ANIMATIONS
+   ========================================== */
+
+/* Process step hover with subtle color hint */
+.process-step {
+    position: relative;
+    overflow: hidden;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-step:hover::before {
+    left: 100%;
+}
+
+/* ==========================================
+   PARALLAX EFFECTS (Optional)
+   ========================================== */
+
+/* Subtle parallax for hero section */
+.hero__container {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Applied via JavaScript for smooth parallax */
+.parallax-layer {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   LOADING STATES
+   ========================================== */
+
+/* Skeleton loader for images */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: skeletonLoading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeletonLoading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Image lazy load fade in */
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+}
+
+/* ==========================================
+   MICROINTERACTIONS
+   ========================================== */
+
+/* Link underline effect */
+.link-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-underline:hover::after {
+    width: 100%;
+}
+
+/* Button press effect */
+.button-press {
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-press:active {
+    transform: scale(0.97);
+}
+
+/* ==========================================
+   ACCESSIBILITY - REDUCED MOTION
+   ========================================== */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero__scroll-line {
+        animation: none;
+    }
+    
+    .parallax-layer {
+        transform: none !important;
+    }
+}
+
+/* ==========================================
+   PERFORMANCE OPTIMIZATIONS
+   ========================================== */
+
+/* Force GPU acceleration for smooth animations */
+.portfolio-item,
+.modal__content,
+.carousel__track,
+.process-step {
+    will-change: transform;
+}
+
+/* Remove will-change after animation completes (set via JS) */
+.animation-complete {
+    will-change: auto;
+}
