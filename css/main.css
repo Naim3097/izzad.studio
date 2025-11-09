@@ -359,18 +359,19 @@ a:hover {
    HERO SECTION
    ========================================== */
 .hero {
-    min-height: calc(100vh - 80px); /* Subtract approximate nav height */
+    min-height: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background-color: var(--color-black);
     position: relative;
     overflow: hidden;
+    padding: calc(var(--space-3xl) + var(--space-2xl)) 0 var(--space-3xl);
 }
 
 .hero__container {
     text-align: center;
-    padding: var(--space-2xl) var(--container-padding);
+    padding: 0 var(--container-padding);
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -1227,7 +1228,7 @@ a:hover {
     }
 
     .hero {
-        min-height: calc(100vh - 70px);
+        padding: var(--space-3xl) 0 var(--space-2xl);
     }
 }
 
@@ -1236,7 +1237,7 @@ a:hover {
    ========================================== */
 @media (max-width: 480px) {
     .hero {
-        min-height: calc(100vh - 60px);
+        padding: var(--space-2xl) 0 var(--space-xl);
     }
 
     .hero__title {
