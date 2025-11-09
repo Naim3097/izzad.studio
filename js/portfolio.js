@@ -76,7 +76,7 @@
                 {
                     client: 'premium product line',
                     approach: 'packaging that becomes keepsake',
-                    image: '/assets/work/packaging/MOKCUP DESIGN 3.jpg',
+                    image: '/assets/work/packaging/mockup-design-3.jpg',
                     deliverables: 'box design, product presentation, brand touchpoints'
                 }
             ]
