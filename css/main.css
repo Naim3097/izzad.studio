@@ -359,7 +359,7 @@ a:hover {
    HERO SECTION
    ========================================== */
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 80px); /* Subtract approximate nav height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,6 +373,7 @@ a:hover {
     padding: var(--space-2xl) var(--container-padding);
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .hero__title {
@@ -1224,12 +1225,20 @@ a:hover {
     .about__team-grid {
         grid-template-columns: 1fr;
     }
+
+    .hero {
+        min-height: calc(100vh - 70px);
+    }
 }
 
 /* ==========================================
    RESPONSIVE DESIGN - MOBILE
    ========================================== */
 @media (max-width: 480px) {
+    .hero {
+        min-height: calc(100vh - 60px);
+    }
+
     .hero__title {
         font-size: var(--font-size-2xl);
     }
