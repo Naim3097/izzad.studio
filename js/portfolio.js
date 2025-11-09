@@ -74,10 +74,10 @@
                     deliverables: 'can design, 6-pack system, seasonal editions'
                 },
                 {
-                    client: 'skincare line',
-                    approach: 'minimal packaging that feels luxe',
-                    image: '/assets/work/packaging/skincare-boxes.jpg',
-                    deliverables: 'bottle design, box structure, tissue paper details'
+                    client: 'premium product line',
+                    approach: 'packaging that becomes keepsake',
+                    image: '/assets/work/packaging/MOKCUP DESIGN 3.jpg',
+                    deliverables: 'box design, product presentation, brand touchpoints'
                 }
             ]
         },
